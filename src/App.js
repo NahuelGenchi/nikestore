@@ -7,14 +7,18 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h1>Nike Store</h1>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div>
+          <a
+            className="App-link"
+            href="https://github.com/NahuelGenchi/nikestore"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Project repository
+          </a>
+          <span> | Nahuel Genchi</span>
+        </div>
+        
       </header>
     </div>
   );
