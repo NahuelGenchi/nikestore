@@ -2,7 +2,7 @@ import NavBar from './components/NavBar';
 
 function App() {
   return (
-    <header>
+    <header className='header'>
       <NavBar />
     </header>
   );

@@ -3,7 +3,7 @@ import nike from '../img/nike.png'
 
 const NavBar = function () {
   return (
-    <header className='header'>
+    <>
       <div className='navBigContainer'>
         <div className='navContainer'>
           <div className='navLogo'>
@@ -22,7 +22,7 @@ const NavBar = function () {
         <img src={nike} alt='Nike logo' className='headerLogoMain' />
         <span className='headerSlogan'>JUST DO IT.</span>
       </div>
-    </header>
+    </>
   );
 };
 
