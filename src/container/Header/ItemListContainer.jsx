@@ -2,7 +2,7 @@ import { Slogan } from "../../components";
 
 import "./Header.scss";
 
-const Header = function() {
+const ItemListContainer = function() {
   return (
     <header>
       <Slogan />
@@ -10,4 +10,4 @@ const Header = function() {
   );
 };
 
-export default Header;
+export default ItemListContainer;

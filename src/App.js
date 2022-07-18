@@ -1,11 +1,11 @@
 import { Navbar } from "./components";
-import { Header } from "./container";
+import { ItemListContainer } from "./container";
 
 function App() {
   return (
     <div className="app">
       <Navbar />
-      <Header />
+      <ItemListContainer />
     </div>
   );
 };

@@ -1,5 +1,7 @@
 import nike from '../assets/nike.png';
 
-export default {
+const images = {
   nike,
 };
+
+export default images;

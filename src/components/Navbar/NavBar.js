@@ -1,3 +1,5 @@
+import CartWidget from "../CartWidget/CartWidget";
+
 import "./Navbar.scss";
 
 const NavBar = function () {
@@ -9,10 +11,12 @@ const NavBar = function () {
         </div>
         <nav>
           <ul>
-            <li><a href='#a'><ion-icon name="home"></ion-icon></a></li>
-            <li><a href='#b'><ion-icon name="information-circle"></ion-icon></a></li>
-            <li><a href='#c'><ion-icon name="heart"></ion-icon></a></li>
-            <li><a href='#d'><ion-icon name="cart"></ion-icon></a></li>
+            {["home", "about", "products", "contact"].map((item) => (
+              <li key={item}>
+                <a href={`#${item}`}>{item}</a>
+              </li>
+            ))}
+            <CartWidget />
           </ul>
         </nav>
       </div>
