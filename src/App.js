@@ -1,11 +1,13 @@
-import NavBar from './components/NavBar';
+import { Navbar } from "./components";
+import { Header } from "./container";
 
 function App() {
   return (
-    <header className='header'>
-      <NavBar />
-    </header>
+    <div className="app">
+      <Navbar />
+      <Header />
+    </div>
   );
-}
+};
 
 export default App;
