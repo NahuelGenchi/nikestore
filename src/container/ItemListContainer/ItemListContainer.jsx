@@ -1,17 +1,23 @@
-import { ItemCount } from "../../components";
+import "./ItemListContainer.scss";
 
-import "./Header.scss";
+import { ItemList } from "../../components";
+import { data } from "../../mock/FakeApi";
+import { useEffect, useState } from "react";
 
 const ItemListContainer = function() {
-  const onAdd = (products) => {
-    console.log(`You've added ${products} products`);
-  }
+  const [loading, setLoading] = useState(true)
+  const [productList, setProductList] = useState([]);
+
+  useEffect(() => {
+    data
+    .then((res) => setProductList(res))
+    .catch((error) => console.log(error))
+    .finally(()=> setLoading(false))
+  }, []);
 
   return (
     <div className="il-container">
-      <div className="il-container__sup">
-        <ItemCount name="Large T-Shirt" stock={3} onAdd={onAdd} />
-      </div>
+      {loading ? <h1>Nike Store</h1> : <ItemList productList={productList}/>}
     </div>
   );
 };
