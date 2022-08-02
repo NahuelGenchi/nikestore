@@ -1,12 +1,16 @@
-import { Navbar } from "./components";
+import { Navbar, ItemDetailContainer } from "./components";
 import { ItemListContainer } from "./container";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="app">
+    <BrowserRouter>
       <Navbar />
-      <ItemListContainer />
-    </div>
+      <Routes>
+        <Route path="/" element={<ItemListContainer />} />
+        <Route path="/item/:id" element={<ItemDetailContainer />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

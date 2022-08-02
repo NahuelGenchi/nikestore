@@ -1,13 +1,16 @@
+import { Link } from "react-router-dom";
+
 import "./Item.scss";
 
 const Item = function({product}) {
-  console.log(product)
   return(
     <div className="item">
       <img className="item-img" src={product.img} alt="Product"/>
       <p className="item-title">{product.title}</p>
       <p className="item-price">{product.price}</p>
-      <button className="item-details">View details</button>
+      <Link to={`/item/${product.id}`} className="item-details">
+        View details
+      </Link>
     </div>
   );
 };

@@ -1,0 +1,25 @@
+.desc-info {
+  padding: 2rem;
+
+  .desc-info-price {
+    font-size: 2rem;
+
+    &::before {
+      content: "$";
+    }
+  }
+
+  .desc-info-stock {
+
+    font-size: 1.2rem;
+    color: gray;
+  }
+
+  .desc-info-stock, .desc-info-price, .desc-info-description {
+    margin-bottom: 1.1rem;
+  }
+}
+
+.desc-img {
+  width: 500px;
+}

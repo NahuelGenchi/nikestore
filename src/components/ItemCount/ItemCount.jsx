@@ -8,9 +8,6 @@ const ItemCount = function(props) {
   return (
     <div className="il-container__item">
       <div className="il-container__item-c">
-        <div className="il-container__item-c-desc">
-          <p>{props.name}</p>
-        </div>
         <div className="il-container__item-c-input">
           <button className="il-c__i-c-input-more" disabled={count <= 1} onClick={() => setCount(count - 1)}>-</button>
           <span className="il-c__i-c-input-count">{count}</span>

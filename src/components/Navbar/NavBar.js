@@ -13,7 +13,7 @@ const NavBar = function () {
           <ul>
             {["home", "about", "products", "contact"].map((item) => (
               <li key={item}>
-                <a href={`#${item}`}>{item}</a>
+                <a href={item === "home" ? "/" : `#${item}`}>{item}</a>
               </li>
             ))}
             <CartWidget />

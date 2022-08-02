@@ -1,4 +1,4 @@
-const products = [
+export const products = [
   {
     id: 1,
     img: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/21d38052-598b-44f6-a857-123c9f72b015/air-force-1-07-mens-shoes-5QFp5Z.png",
@@ -57,5 +57,12 @@ export const data = new Promise((resolve, reject) => {
     } else {
       reject("Something isn't working...");
     }
-  }, 3000);
+  }, 1000);
 });
+
+export const getItem = (productId) => {
+  const task = new Promise((resolve) => {
+    setTimeout(() => resolve(products[0]), 2000);
+  });
+  return task;
+};

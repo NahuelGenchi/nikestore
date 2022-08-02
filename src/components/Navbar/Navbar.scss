@@ -26,17 +26,16 @@
         }
 
         nav {
-            width: 40%;
             display: flex;
             align-items: center;
             justify-content: flex-end;
 
             ul {
-                width: 100%;
                 list-style-type: none;
                 display: flex;
-                justify-content: space-evenly;
+                justify-content: flex-end;
                 align-items: center;
+                gap: 2rem;
 
                 li {
                     font-weight: 500;
