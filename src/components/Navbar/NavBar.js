@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
 
 import "./Navbar.scss";
@@ -7,18 +8,19 @@ const NavBar = function () {
     <div className='navBigContainer'>
       <div className='navContainer'>
         <div className='navLogo'>
-          <h1>NIKE</h1>
+          <Link to={`/`}><span>NIKE</span></Link>
         </div>
         <nav>
           <ul>
-            {["home", "about", "products", "contact"].map((item) => (
-              <li key={item}>
-                <a href={item === "home" ? "/" : `#${item}`}>{item}</a>
+            {["shoes", "t-shirt", "pants"].map((category, index) => (
+              <li key={index}>
+                <Link to={`/category/${category}`}>{category}</Link>
               </li>
             ))}
-            <CartWidget />
+
           </ul>
         </nav>
+        <CartWidget/>
       </div>
     </div>
   );

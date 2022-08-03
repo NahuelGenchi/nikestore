@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 import "./CartWidget.scss";
 
 const CartWidget = function() {
   return (
-    <li><a href='#d'><ion-icon name="cart"></ion-icon></a></li>
+    <Link to={`/cart`}><ion-icon name="cart"></ion-icon></Link>
   );
 };
 
