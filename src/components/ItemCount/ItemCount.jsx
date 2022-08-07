@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import "./ItemCount.scss";
 
@@ -14,7 +15,9 @@ const ItemCount = function(props) {
           <button className="il-c__i-c-input-less" disabled={count >= props.stock} onClick={() => setCount(count + 1)}>+</button>
         </div>
       </div>
-      <button className="il-container__item-button" disabled={props.stock <= 0} onClick={() => props.onAdd(count)} >Add to cart</button>
+      <Link to="/cart" className="link-to-cart">
+        <button className="il-container__item-button" disabled={props.stock <= 0} onClick={() => props.onAdd(count)} >Add to cart</button>
+      </Link>
     </div>
   );
 };

@@ -65,20 +65,23 @@
       }
     }
   }
-  .il-container__item-button {
-    padding: 0 3rem;
-    border: none;
-
-    background-color: rgb(26, 108, 231);
-    color: white;
-    cursor: pointer;
-    font-weight: bold;
-    outline: none;
-
-    transition: background-color 0.5s;
-
-    &:hover {
-      background-color: rgb(12, 52, 112);
+  .link-to-cart {
+    .il-container__item-button {
+      height: 100%;
+      padding: 0 3rem;
+      border: none;
+  
+      background-color: rgb(26, 108, 231);
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+      outline: none;
+  
+      transition: background-color 0.5s;
+  
+      &:hover {
+        background-color: rgb(12, 52, 112);
+      }
     }
   }
 }

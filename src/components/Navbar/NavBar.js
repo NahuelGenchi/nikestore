@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
 
 import "./Navbar.scss";
@@ -14,7 +14,7 @@ const NavBar = function () {
           <ul>
             {["shoes", "t-shirt", "pants"].map((category, index) => (
               <li key={index}>
-                <Link to={`/category/${category}`}>{category}</Link>
+                <NavLink to={`/category/${category}`}>{category}</NavLink>
               </li>
             ))}
 

@@ -15,18 +15,12 @@ const ItemListContainer = function() {
     data
     .then(res => {
       const allItems = res;
-      /*
-      const categoryItems = allItems.filter(item => item.category === categoryId);
-      console.log(categoryItems);
-      */
       let categoryItems = [];
       for (let i = 0; i < allItems.length; i++) {
         if (allItems[i].category === categoryId) {
           categoryItems.push(allItems[i]);
         }
       };
-      console.log(allItems);
-      console.log(categoryItems);
       setProductList(categoryItems.length >= 1 ? categoryItems : allItems);
     }).catch(error => {
       console.log(error);
