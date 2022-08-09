@@ -1,0 +1,21 @@
+.gocart-link {
+  margin-top: 2rem;
+  
+  button {
+    padding: 1rem calc(8rem - 3px);
+    border: 1px solid gray;
+
+    outline: none;
+    background-color: white;
+
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: background-color 0.5s, color 0.5s;
+
+    &:hover {
+      background-color: rgb(63, 63, 63);
+      color: white;
+    }
+  }
+}

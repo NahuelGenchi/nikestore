@@ -5,3 +5,5 @@ export { default as Item } from "./Item/Item";
 export { default as ItemCount } from "./ItemCount/ItemCount";
 export { default as ItemDetailContainer } from "./ItemDetailContainer/ItemDetailContainer";
 export { default as ItemDetail } from "./ItemDetail/ItemDetail";
+export { default as GoCart } from "./GoCart/GoCart";
+export { default as CartContext } from "./CartContext/CartContext";
