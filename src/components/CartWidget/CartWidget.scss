@@ -1,7 +1,28 @@
-ion-icon {
-  font-size: 1.5rem;
-  color: rgb(48, 48, 48);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.cart-widget {
+  position: relative;
+  ion-icon {
+    font-size: 1.7rem;
+    color: rgb(48, 48, 48);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  span {
+    position: absolute;
+    padding: 2px 8px;
+    bottom: -15px;
+    left: -10px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    font-weight: bold;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+  }
 }
