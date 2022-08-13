@@ -1,10 +1,10 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 
 import "./Cart.scss";
 
 const Cart = () => {
-  const { cart, removeItem } = useContext(CartContext);
+  const { cart, removeItem, clearCart } = useContext(CartContext);
   let total = 0;
 
   for (let i = 0; i < cart.length; i++) {
@@ -14,6 +14,9 @@ const Cart = () => {
   return(
     <div className="cartSection">
       <h1 className="cart-title">Cart <span>({cart.length})</span></h1>
+      <div className="cart-options" style={{display: cart.length > 0 ? "inherit" : "none"}}>
+        <button className="co-clear" onClick={() => clearCart()}>Clear cart</button>
+      </div>
       {cart.map((product, index) => {
         return(
           <div className="cart-product" key={index}>
