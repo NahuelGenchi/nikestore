@@ -4,13 +4,12 @@ import { CartContext } from "../../context/CartContext";
 import "./Cart.scss";
 
 const Cart = () => {
-  const { cart } = useContext(CartContext);
+  const { cart, removeItem } = useContext(CartContext);
   let total = 0;
 
   for (let i = 0; i < cart.length; i++) {
     total += cart[i].price;
   }
-  console.log(total);
 
   return(
     <div className="cartSection">
@@ -24,7 +23,7 @@ const Cart = () => {
             <div className="cp-info">
               <span className="cpi-title">{product.title}</span>
               <p className="cpi-price">{product.price}</p>
-              <p className="cpi-delete">Delete</p>
+              <p className="cpi-delete" onClick={() => removeItem(product.id)}>Delete</p>
             </div>
           </div>
         );

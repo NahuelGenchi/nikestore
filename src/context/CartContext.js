@@ -13,11 +13,16 @@ const CartProvider = ({children}) => {
     // verify if an item is inside the cart or not
   };
 
+  const removeItem = itemId => {
+    setCart(cart.filter(item => item.id !== itemId));
+  };
+
   return(
     <CartContext.Provider
       value={{
         cart,
-        addItem
+        addItem,
+        removeItem
       }}>
         {children}
     </CartContext.Provider>
