@@ -7,7 +7,7 @@ const CartProvider = ({children}) => {
   const [cart, setCart] = useState([]);
 
   //add to cart
-  const addToCart = (item, quantity) => {
+  const addItem = (item, quantity) => {
     const addItem = { ...item, quantity: quantity };
     setCart([...cart, addItem]);
     // verify if an item is inside the cart or not
@@ -17,7 +17,7 @@ const CartProvider = ({children}) => {
     <CartContext.Provider
       value={{
         cart,
-        addToCart
+        addItem
       }}>
         {children}
     </CartContext.Provider>
