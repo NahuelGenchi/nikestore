@@ -11,6 +11,8 @@ const CartProvider = ({children}) => {
     setCart([...cart, addItem]);
   };
 
+  const totalQuantity = cart.reduce((count, product) => count += product.quantity, 0)
+
   const removeItem = itemId => {
     setCart(cart.filter(item => item.id !== itemId));
   };
@@ -34,7 +36,8 @@ const CartProvider = ({children}) => {
         addItem,
         removeItem,
         clearCart,
-        isInCart
+        isInCart,
+        totalQuantity
       }}>
         {children}
     </CartContext.Provider>

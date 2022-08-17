@@ -8,7 +8,7 @@ const ItemDetail = function({productDetail}) {
   const { id, img, title, description, price, stock } = productDetail[0];
   const [amountItem, setAmountItem] = useState(0);
 
-  const { cart, addItem, isInCart } = useContext(CartContext);
+  const { addItem, isInCart } = useContext(CartContext);
 
   const onAdd = (amount) => {
     setAmountItem(amount);
