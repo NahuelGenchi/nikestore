@@ -5,16 +5,17 @@ import { Link } from "react-router-dom";
 import "./Cart.scss";
 
 const Cart = () => {
-  const { cart, removeItem, clearCart } = useContext(CartContext);
+  const { cart, removeItem, clearCart, totalQuantity } = useContext(CartContext);
   let total = 0;
 
   for (let i = 0; i < cart.length; i++) {
-    total += cart[i].price;
-  }
+    let itemPriceTotal = cart[i].price * cart[i].quantity;
+    total += itemPriceTotal;
+  };
 
   return(
     <div className="cartSection">
-      <h1 className="cart-title">Cart <span>({cart.length})</span></h1>
+      <h1 className="cart-title">Cart <span>({totalQuantity})</span></h1>
       <p className="cart-noitems" style={{display: cart.length > 0 && "none"}}>There are no items in the cart.</p>
       <div className="cart-options" style={{display: cart.length > 0 ? "inherit" : "none"}}>
         <button className="co-clear" onClick={() => clearCart()}>Clear cart</button>
@@ -25,13 +26,20 @@ const Cart = () => {
       {cart.map((product, index) => {
         return(
           <div className="cart-product" key={index}>
-            <div className="cp-img-container">
-              <img src={product.img} alt="" />
+            <div className="cp-start">
+              <div className="cp-img-container">
+                <img src={product.img} alt="" />
+              </div>
+              <div className="cp-info">
+                <span className="cpi-title">{product.title}</span>
+                <p className="cpi-delete" onClick={() => removeItem(product.id)}>Delete</p>
+              </div>
             </div>
-            <div className="cp-info">
-              <span className="cpi-title">{product.title}</span>
-              <p className="cpi-price">{product.price}</p>
-              <p className="cpi-delete" onClick={() => removeItem(product.id)}>Delete</p>
+            <div className="cp-end">
+              <div className="cpe-container">
+                <span>Quantity: {product.quantity}</span>
+                <p className="cpi-price">{product.price * product.quantity}</p>
+              </div>
             </div>
           </div>
         );

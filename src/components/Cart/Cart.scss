@@ -55,45 +55,70 @@
     border-bottom: 1px solid rgb(200, 200, 200);
     
     display: flex;
+    justify-content: space-between;
 
-    .cp-img-container {
-      img {
-        width: 10rem;
+    .cp-start {
+
+      display: flex;
+      align-items: center;
+
+      .cp-img-container {
+        img {
+          width: 10rem;
+        }
+      }
+  
+      .cp-info {
+        padding-left: 1.5rem;
+  
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+  
+        .cpi-title {
+          font-size: 1.7rem;
+          font-weight: 500;
+        }
+  
+        .cpi-delete {
+          width: fit-content;
+          display: inline-block;
+  
+          cursor: pointer;
+          color: rgb(201, 77, 77);
+  
+          transition: color 0.5s;
+  
+          &:hover {
+            color: red;
+          }
+        }
       }
     }
 
-    .cp-info {
-      padding-left: 1.5rem;
+    .cp-end {
 
       display: flex;
-      flex-direction: column;
-      gap: 1rem;
+      align-items: center;
 
-      .cpi-title {
-        font-size: 1.7rem;
-        font-weight: 500;
-      }
-      
-      .cpi-price {
-        font-size: 2rem;
-      }
+      .cpe-container {
+        padding-bottom: 2.5rem;
 
-      .cpi-price::before {
-        content: "$";
-      }
+        display: flex;
+        align-items: flex-start;
+        gap: 3rem;
 
-      .cpi-delete {
-        width: fit-content;
-        display: inline-block;
-
-        cursor: pointer;
-        color: rgb(201, 77, 77);
-
-        transition: color 0.5s;
-
-        &:hover {
-          color: red;
+        .cpi-price {
+          font-size: 1.7rem;
         }
+  
+        .cpi-price::before {
+          content: "$";
+        }
+  
+        span {
+          font-size: 1.7rem;
+        }  
       }
     }
   }
