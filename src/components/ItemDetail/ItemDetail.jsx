@@ -5,7 +5,7 @@ import { CartContext } from "../../context/CartContext";
 import "./ItemDetail.scss";
 
 const ItemDetail = function({productDetail}) {
-  const { id, img, title, description, price, stock } = productDetail[0];
+  const { id, img, title, description, price, stock } = productDetail;
   const [amountItem, setAmountItem] = useState(0);
 
   const { addItem, isInCart } = useContext(CartContext);
