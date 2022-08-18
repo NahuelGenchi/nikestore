@@ -8,7 +8,7 @@ const CartWidget = function() {
 
   return (
       <div className="cart-widget" style={{display: cart.length < 1 && "none"}} open={cart.length > 0 ? true : false}>
-        <Link to={`/cart`}><ion-icon name="cart"></ion-icon></Link>
+        <Link to={`/cart`}><ion-icon name="bag-outline"></ion-icon></Link>
         <span>{totalQuantity}</span>
       </div>
   );
