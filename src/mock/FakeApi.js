@@ -54,7 +54,7 @@ export const products = [
     category: "shoes"
   },
   {
-    id: 7,
+    id: 100,
     img: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/b2a2ce87-aa1d-4f22-92c9-16bc2cd2ce46/sportswear-tech-fleece-mens-pants-0Tg4Xp.png",
     title: "Nike Sportswear Tech Fleece",
     description: "Introducing the new straight leg Tech Fleece bungee pants. These pants have 2 iconic Nike Tech Fleece Pockets with taped zipper surrounds and reflective zipper pulls. Made with soft fleece and 2 adjustable toggles at each leg opening, they let you cinch up and show off your sneakers or keep it casual and open for airflow.",
@@ -63,7 +63,7 @@ export const products = [
     category: "pants"
   },
   {
-    id: 8,
+    id: 101,
     img: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/b0bd4931-2640-4614-9ac8-b0537b192d70/sportswear-tech-fleece-mens-utility-pants-nGfRWl.png",
     title: "Nike Sportswear Tech Fleece",
     description: "The Nike Sportswear Tech Fleece Utility Pants have a tactical look and a warm, low-bulk feel. Similar to our jogger fit, they taper slightly at the lower leg for a clean, comfortable look. The dual-entry cargo pocket on the right leg features a side-zipper entry and a water-repellent woven construction.",
@@ -72,7 +72,7 @@ export const products = [
     category: "pants"
   },
   {
-    id: 9,
+    id: 102,
     img: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/9845db21-4de0-4563-a0b1-c90d3b568cca/therma-fit-mens-camo-tapered-training-pants-RnzrsW.png",
     title: "Nike Therma-FIT",
     description: "Get after it in cool weather with these supersoft, tapered pants. We added heat-regulating technology to help you stay after your reps, even in the chill. We also added an allover, brushed camo print inspired by British military fatigues.",
@@ -81,7 +81,7 @@ export const products = [
     category: "pants"
   },
   {
-    id: 10,
+    id: 200,
     img: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/985310be-fd1d-4801-91f0-4e2896895fdc/sportswear-club-mens-t-shirt-ShrJfX.png",
     title: "Nike Sportswear Club",
     description: "The Nike Sportswear Club T-Shirt is made with our everyday cotton fabric and a classic fit for a familiar feel right out of the bag. An embroidered Futura logo on the chest provides a signature Nike look.",
@@ -90,7 +90,7 @@ export const products = [
     category: "t-shirt"
   },
   {
-    id: 11,
+    id: 201,
     img: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/484e138a-0a31-4fd1-848b-f70360a3ae7a/giannis-dri-fit-mens-basketball-t-shirt-5bHrd3.png",
     title: "Giannis Nike Dri-FIT",
     description: "Freakish abilities, championship pedigree. That's you on the court in the Giannis Tee. A soft feel and a relaxed fit give you room to shoot your shot and hustle back to defense.",
@@ -99,7 +99,7 @@ export const products = [
     category: "t-shirt"
   },
   {
-    id: 12,
+    id: 202,
     img: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/6f6ebab9-3c66-4553-bd41-9c2d2cc921b1/dri-fit-miler-dye-mens-short-sleeve-running-top-rvt5D2.png",
     title: "Nike Dri-FIT Miler D.Y.E.",
     description: "We gave the Miler Top a new spin to celebrate the work you put in to your running journey and the endorphins that make it all worth it. It still has a soft, light and breathable feel, but with graphics that show off the bliss your neurons feel with every step.",

@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ItemList } from "../../components";
-import { data } from "../../mock/FakeApi";
 
 import "./ItemListContainer.scss";
 
+import { collection, getDocs, getFirestore } from "firebase/firestore";
 
 const ItemListContainer = function() {
   const [loading, setLoading] = useState(true)
@@ -12,21 +12,20 @@ const ItemListContainer = function() {
   const {categoryId} = useParams();
 
   useEffect(() => {
-    data
-    .then(res => {
-      const allItems = res;
-      let categoryItems = [];
-      for (let i = 0; i < allItems.length; i++) {
-        if (allItems[i].category === categoryId) {
-          categoryItems.push(allItems[i]);
-        }
-      };
-      setProductList(categoryItems.length >= 1 ? categoryItems : allItems);
-    }).catch(error => {
-      console.log(error);
-    }).finally(() => {
-      setLoading(false);
-    })
+    const db = getFirestore();
+    const itemsCollection = collection(db, "items");
+    getDocs(itemsCollection)
+      .then((snapshot) => {
+        const categoryItems = snapshot.docs.filter((doc) => doc.data().category === categoryId);
+        const categoryItemsArray = [];
+        for (let i = 0; i < categoryItems.length; i++) {
+          categoryItemsArray.push({id: categoryItems[i].id, ...categoryItems[i].data()});
+        };
+        setProductList(categoryItemsArray.length > 0 ? categoryItemsArray : snapshot.docs.map((doc) => ({id: doc.id, ...doc.data() })));
+      })
+      .finally(() => {
+        setLoading(false);
+      })
   }, [categoryId]);
 
   return (
