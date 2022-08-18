@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 
@@ -6,12 +6,16 @@ import "./Cart.scss";
 
 const Cart = () => {
   const { cart, removeItem, clearCart, totalQuantity } = useContext(CartContext);
-  let total = 0;
+  const [total, setTotal] = useState(0);
 
-  for (let i = 0; i < cart.length; i++) {
-    let itemPriceTotal = cart[i].price * cart[i].quantity;
-    total += itemPriceTotal;
-  };
+  useEffect(() => {
+    let totalFor = 0;
+    for (let i = 0; i < cart.length; i++) {
+      let itemPriceTotal = cart[i].price * cart[i].quantity;
+      totalFor += itemPriceTotal;
+    };
+    setTotal(totalFor);
+  }, [cart]);
 
   return(
     <div className="cartSection">
