@@ -48,6 +48,7 @@ const NavBar = function () {
             ))}
           </ul>
         </nav>
+        <CartWidget className="cartDesktop"/>
       </div>
     </div>
   );

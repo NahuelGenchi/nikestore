@@ -33,6 +33,13 @@
   }
 }
 
+.cartDesktop {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+}
+
 .cart-widget[open] {
   animation: fade-in 300ms forwards;
 }

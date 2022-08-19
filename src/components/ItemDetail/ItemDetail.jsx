@@ -12,7 +12,7 @@ const ItemDetail = function({productDetail}) {
 
   const onAdd = (amount) => {
     setAmountItem(amount);
-    addItem(productDetail[0], amount);
+    addItem(productDetail, amount);
   };
 
   const countDisplay = (itemId) => {
