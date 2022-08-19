@@ -43,6 +43,7 @@ const Cart = () => {
               <div className="cpe-container">
                 <span>Quantity: {product.quantity}</span>
                 <p className="cpi-price">{product.price * product.quantity}</p>
+                <p className="cpi-delete" onClick={() => removeItem(product.id)}>Delete</p>
               </div>
             </div>
           </div>
