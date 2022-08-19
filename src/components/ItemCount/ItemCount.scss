@@ -1,33 +1,28 @@
+@use "../../scss/mixins.scss" as mixin;
+
 .il-container__item {
   margin-top: 2rem;
 
-  display: flex;
+  @include mixin.flex-center($justify-content: flex-start, $align-items: initial);
   flex-direction: column;
-  justify-content: flex-start;
 
   .il-container__item-c {
-    display: flex;
+    @include mixin.flex-center($justify-content: space-between);
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    
 
     .il-container__item-c-input * {
       height: 3rem;
       width: 3rem;
       
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include mixin.flex-center;
       flex-grow: 1;
     }
+
     .il-container__item-c-input {
       width: 100%;
       border: 1px solid gray;
 
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      @include mixin.flex-center($justify-content: space-between);
 
       background-color: white;
 
