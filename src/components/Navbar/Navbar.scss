@@ -1,23 +1,19 @@
+@use "../../scss/mixins.scss" as mixin;
+
 .navBigContainer {
 	min-height: calc(15vh - 1px);
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	@include mixin.flex-center;
 	border-bottom: 1px solid rgb(218, 218, 218);
 
 	.navContainer {
 		position: relative;
 		min-height: calc(15vh - 1px);
 		width: 80vw;
-
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		@include mixin.flex-center($justify-content: space-between);
 
 		.navLogo {
 			min-height: calc(15vh - 1px);
-			display: flex;
-			align-items: center;
+			@include mixin.flex-center($justify-content: initial);
 
 			a {
 				display: flex;
@@ -42,9 +38,7 @@
 			cursor: pointer;
 
 			.ncmm-icon {
-				display: flex;
-				align-items: center;
-				justify-content: center;
+				@include mixin.flex-center;
 
 				ion-icon {
 					font-size: 2rem;
@@ -68,10 +62,7 @@
 
 				.ncmml-topbar {
 					margin-bottom: 5rem;
-
-					display: flex;
-					justify-content: flex-end;
-					align-items: center;
+					@include mixin.flex-center($justify-content: flex-end);
 
 					img {
 						width: 3.5rem;
@@ -86,9 +77,7 @@
 					button {
 						padding: 0.3rem 0.3rem;
 
-						display: flex;
-						align-items: center;
-						justify-content: center;
+						@include mixin.flex-center;
 
 						border: 1px solid rgb(160, 160, 160);
 						border-radius: 5px;
@@ -104,10 +93,8 @@
 				}
 
 				ul {
-					display: flex;
+					@include mixin.flex-center($justify-content: flex-start);
 					flex-direction: column;
-					align-items: center;
-					justify-content: flex-start;
 
 					list-style-type: none;
 
@@ -117,9 +104,7 @@
 						width: 100%;
 						border-bottom: 1px solid gray;
 
-						display: flex;
-						align-items: center;
-						justify-content: center;
+						@include mixin.flex-center;
 
 						a {
 							color: inherit;
@@ -135,9 +120,7 @@
 			}
 
 			ion-icon[name=bag-outline] {
-				display: flex;
-				align-items: center;
-				justify-content: center;
+				@include mixin.flex-center;
 
 				font-size: 1.5rem;
 			}
@@ -150,16 +133,13 @@
 			right: 0;
 			margin: 0 auto;
 
-			display: none;
-			align-items: center;
-			justify-content: flex-end;
+			@include mixin.flex-center($display: none, $justify-content: flex-end);
 
 			ul {
-				list-style-type: none;
-				display: flex;
-				justify-content: flex-end;
-				align-items: center;
+				@include mixin.flex-center($justify-content: flex-end);
 				gap: 2rem;
+
+				list-style-type: none;
 
 				li {
 					font-weight: 500;
