@@ -1,7 +1,8 @@
+@use "../../scss/mixins.scss" as mixin;
+
 .item-list {
-  display: flex;
+  @include mixin.flex-center($justify-content: initial);
   flex-direction: column;
-  align-items: center; 
 }
 
 @media screen and (min-width: 768px) {
