@@ -1,5 +1,11 @@
+@use "./variables.scss" as v;
+
 @mixin flex-center($display: flex, $justify-content: center, $align-items: center) {
   display: $display;
   justify-content: $justify-content;
   align-items: $align-items;
+}
+
+@mixin border($property, $color) {
+  #{$property}: v.$standard-border $color;
 }
