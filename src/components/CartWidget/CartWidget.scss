@@ -1,16 +1,15 @@
+@use "../../scss/mixins.scss" as mixin;
+
 .cart-widget {
   position: relative;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include mixin.flex-center;
 
   ion-icon {
+    @include mixin.flex-center;
+
     font-size: 1.7rem;
     color: rgb(48, 48, 48);
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   span {
@@ -20,9 +19,7 @@
     left: -8px;
     border-radius: 50%;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include mixin.flex-center;
 
     text-align: center;
     font-weight: bold;
