@@ -2,6 +2,7 @@
   margin-top: 2rem;
 
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
 
   .il-container__item-c {
@@ -9,6 +10,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    
 
     .il-container__item-c-input * {
       height: 3rem;
@@ -17,8 +19,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-grow: 1;
     }
     .il-container__item-c-input {
+      width: 100%;
       border: 1px solid gray;
 
       display: flex;
@@ -66,7 +70,7 @@
     }
   }
   .il-container__item-button {
-    padding: 0 3rem;
+    padding: 1rem;
     border: 1px solid gray;
 
     background-color: rgb(26, 108, 231);
@@ -80,10 +84,20 @@
     &:hover {
       background-color: rgb(12, 52, 112);
     }
+
+    @media screen and (min-width: 768px) {
+      padding: 0 3rem;
+    }
   }
 
   .il-container__item-button[disabled] {
     background-color: rgb(63, 63, 63);
     cursor: default;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .il-container__item {
+    flex-direction: row;
   }
 }
