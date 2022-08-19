@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { ItemList } from "../../components";
+import { ItemList } from "..";
 
 import "./ItemListContainer.scss";
 
