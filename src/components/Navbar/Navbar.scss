@@ -36,10 +36,10 @@
 			display: flex;
 			gap: 1rem;
 
-			cursor: pointer;
-
 			.ncmm-icon {
 				@include mixin.flex-center;
+
+				cursor: pointer;
 
 				ion-icon {
 					font-size: 2rem;
@@ -83,6 +83,7 @@
 						@include mixin.border(border, c.$slate-700);
 						border-radius: 5px;
 
+						cursor: pointer;
 						outline: none;
 						background-color: inherit;
 						color: inherit;

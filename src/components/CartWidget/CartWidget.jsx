@@ -5,7 +5,6 @@ import { CartContext } from "../../context/CartContext";
 
 const CartWidget = function(props) {
   const { cart, totalQuantity } = useContext(CartContext);
-  console.log(cart.length);
 
   return (
       <div className={`cart-widget ${props.className}`} style={{display: cart.length < 1 && "none"}} open={cart.length > 0 ? true : false}>
