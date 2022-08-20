@@ -24,12 +24,13 @@
   width: auto;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 960px) {
   .desc-info {
     padding: 2rem;
   }
   
   .desc-img {
-    width: 500px;
+    width: calc(20rem + 10vw);
+    max-width: 500px;
   }
 }
