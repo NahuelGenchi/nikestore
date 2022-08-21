@@ -1,3 +1,5 @@
+import { LinkIcon } from "../index";
+
 import "./Footer.scss";
 
 const Footer = () => {
@@ -5,9 +7,9 @@ const Footer = () => {
     <footer className="footer">
       <div className="f-container">
         <div className="fc-links">
-          <ion-icon name="logo-github"></ion-icon>
-          <ion-icon name="logo-linkedin"></ion-icon>
-          <ion-icon name="mail"></ion-icon>
+          <LinkIcon icon="logo-github" link="https://github.com/NahuelGenchi"/>
+          <LinkIcon icon="logo-linkedin" link="https://www.linkedin.com/in/nahuel-genchi"/>
+          <LinkIcon icon="mail" link="mailto:nahuelgenchi@gmail.com"/>
         </div>
         <div className="fc-location">
           <ion-icon name="location"></ion-icon>
