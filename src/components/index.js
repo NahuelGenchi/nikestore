@@ -7,3 +7,4 @@ export { default as ItemDetailContainer } from "./ItemDetailContainer/ItemDetail
 export { default as ItemDetail } from "./ItemDetail/ItemDetail";
 export { default as GoCart } from "./GoCart/GoCart";
 export { default as Cart } from "./Cart/Cart";
+export { default as Footer } from "./Footer/Footer";
