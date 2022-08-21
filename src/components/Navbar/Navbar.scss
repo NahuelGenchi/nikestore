@@ -47,7 +47,7 @@
 			}
 
 			.ncmm-list {
-				height: 80vh;
+				height: 100vh;
 				width: 100vw;
 				position: fixed;
 				top: 0;
@@ -55,6 +55,7 @@
 				right: -20vw;
 				margin: 0 auto;
 				padding: 2rem;
+				animation: fade-in 150ms forwards;
 
 				flex-direction: column;
 
@@ -174,4 +175,13 @@
 			}	
 		}
 	}
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
 }
