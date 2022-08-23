@@ -198,6 +198,7 @@
       .cp-end {
         .cpe-container {
           flex-direction: row;
+          align-items: flex-end;
           gap: 3rem;
         }
       }

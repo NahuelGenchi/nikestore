@@ -1,12 +1,14 @@
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../context/CartContext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import "./Cart.scss";
 
 const Cart = () => {
   const { cart, removeItem, clearCart, totalQuantity } = useContext(CartContext);
   const [total, setTotal] = useState(0);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     let totalFor = 0;
@@ -51,7 +53,7 @@ const Cart = () => {
       })}
       <p className="cart-total" style={{display: cart.length < 1 && "none"}}>Total: ${total}</p>
       <div className="cart-payment" style={{display: cart.length < 1 && "none"}}>
-        <button className="co-clear">Proceed to payment</button>
+        <button className="co-clear" onClick={() => navigate("/checkout")}>Proceed to payment</button>
       </div>
     </div>
   );
