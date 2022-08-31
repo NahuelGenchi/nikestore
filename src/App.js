@@ -4,8 +4,6 @@ import { Navbar, ItemListContainer, ItemDetailContainer, Cart, Checkout, Footer 
 import CartProvider from "./context/CartContext";
 
 function App() {
-  console.log("Hello, World");
-
   return (
     <CartProvider>
       <BrowserRouter>

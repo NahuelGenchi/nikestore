@@ -18,7 +18,6 @@ const ItemDetailContainer = (props) => {
       .then((snapshot) => {
         let idItem = snapshot.docs.filter(doc => doc.id === id);
         idItem = {id, ...idItem[0].data()};
-        console.log(idItem);
         setProductDetail(idItem);
       })
       .finally(() => setLoading(false))

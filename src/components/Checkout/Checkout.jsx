@@ -22,8 +22,6 @@ const Checkout = () => {
     })
   };
 
-  console.log(buyer);
-
   const finishOrder = (e) => {
     const db = getFirestore();
     e.preventDefault();
