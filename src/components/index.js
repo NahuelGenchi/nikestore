@@ -1,4 +1,5 @@
 export { default as Navbar } from "./Navbar/NavBar";
+export { default as ScrollToTop } from "./ScrollToTop/ScrollToTop";
 export { default as Main } from "./Main/Main";
 export { default as ItemListContainer } from "./ItemListContainer/ItemListContainer";
 export { default as ItemList } from "./ItemList/ItemList";

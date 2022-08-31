@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { Navbar, Main, ItemListContainer, ItemDetailContainer, Cart, Checkout, Footer } from "./components";
+import { Navbar, ScrollToTop, Main, ItemListContainer, ItemDetailContainer, Cart, Checkout, Footer } from "./components";
 import CartProvider from "./context/CartContext";
 
 function App() {
@@ -9,6 +9,7 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Main>
+        <ScrollToTop/>
           <Routes>
             <Route path="/" element={<ItemListContainer />} />
             <Route path="/category/:categoryId" element={<ItemListContainer />} />
