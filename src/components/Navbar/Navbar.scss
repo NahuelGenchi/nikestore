@@ -54,7 +54,7 @@
 				left: -20vw;
 				right: -20vw;
 				margin: 0 auto;
-				padding: 2rem;
+				padding: 2rem 10vw;
 				animation: fade-in 150ms forwards;
 
 				flex-direction: column;
@@ -63,7 +63,9 @@
 				color: c.$slate-100;
 
 				.ncmml-topbar {
+					min-height: 10vh;
 					margin-bottom: 5rem;
+
 					@include mixin.flex-center($justify-content: flex-end);
 
 					img {
