@@ -58,11 +58,11 @@ const Checkout = () => {
               <label htmlFor="phone">
                 <p>Phone number:</p>
               </label>
-              <input type="tel" placeholder="+54 11 6283-8700" name="phone" onChange={buyerData}/>
+              <input type="tel" placeholder="+54 11 6283-8700" name="phone" id="phone" onChange={buyerData}/>
               <label htmlFor="email">
                 <p>E-mail:</p>
               </label>
-              <input type="email" placeholder="nahuelgenchi@gmail.com" name="email" onChange={buyerData}/>
+              <input type="email" placeholder="nahuelgenchi@gmail.com" name="email" id="email" onChange={buyerData}/>
               <input type="submit" value="Submit order"/>
             </form>
           </div>
