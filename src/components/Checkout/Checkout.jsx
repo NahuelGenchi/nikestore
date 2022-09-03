@@ -20,27 +20,32 @@ const Checkout = () => {
       ...buyer,
       [e.target.name]: e.target.value
     })
+    console.log(buyer);
   };
 
   const finishOrder = (e) => {
     const db = getFirestore();
     e.preventDefault();
 
-    if (Object.values(buyer).length !== 3) {
+    if (Object.values(buyer).length !== 4) {
       alert("All fields are required!");
     } else {
-      const ordersCollection = collection(db, "orders");
-      addDoc(ordersCollection, {
-        buyer,
-        items: cart,
-        total: totalQuantity,
-        date: serverTimestamp()
-      })
-        .then((res) => {
-          setOrderId(res.id);
-          clearCart();
+      if (buyer.email !== buyer.email2) {
+        alert("Emails are different!");
+      } else {
+        const ordersCollection = collection(db, "orders");
+        addDoc(ordersCollection, {
+          buyer,
+          items: cart,
+          total: totalQuantity,
+          date: serverTimestamp()
         })
-        .catch(error => console.log(error));
+          .then((res) => {
+            setOrderId(res.id);
+            clearCart();
+          })
+          .catch(error => console.log(error));
+      }
     };
   };
 
@@ -54,16 +59,20 @@ const Checkout = () => {
               <label htmlFor="name" id="name-label">
                 <p>Full name:</p>
               </label>
-              <input type="text" placeholder="John Doe" name="name" id="name" onChange={buyerData}/>
+              <input type="text" placeholder="John Doe" name="name" id="name" onChange={buyerData} />
               <label htmlFor="phone">
                 <p>Phone number:</p>
               </label>
-              <input type="tel" placeholder="+54 11 6283-8700" name="phone" id="phone" onChange={buyerData}/>
+              <input type="tel" placeholder="+54 11 6283-8700" name="phone" id="phone" onChange={buyerData} />
               <label htmlFor="email">
-                <p>E-mail:</p>
+                <p>Email:</p>
               </label>
-              <input type="email" placeholder="nahuelgenchi@gmail.com" name="email" id="email" onChange={buyerData}/>
-              <input type="submit" value="Submit order"/>
+              <input type="email" placeholder="nahuelgenchi@gmail.com" name="email" id="email" onChange={buyerData} />
+              <label htmlFor="email2">
+                <p>Re-enter email:</p>
+              </label>
+              <input type="email" placeholder="nahuelgenchi@gmail.com" name="email2" id="email2" onChange={buyerData} />
+              <input type="submit" value="Submit order" />
             </form>
           </div>
           :
