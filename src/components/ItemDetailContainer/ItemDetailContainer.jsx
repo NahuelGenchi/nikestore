@@ -11,6 +11,14 @@ const ItemDetailContainer = (props) => {
 
   const { id } = useParams();
 
+  const loadContent = () => {
+    if (productDetail === false) {
+      return "Error: the product doesn't exist..";
+    } else {
+      return <ItemDetail productDetail={productDetail}/>;
+    }
+  };
+
   useEffect(() => {
     const db = getFirestore();
     const itemsCollection = collection(db, "items");
@@ -20,13 +28,14 @@ const ItemDetailContainer = (props) => {
         idItem = {id, ...idItem[0].data()};
         setProductDetail(idItem);
       })
+      .catch(() => setProductDetail(false))
       .finally(() => setLoading(false))
   }, [id]);
 
   return (
     <>
       <div className="description">
-        {loading ? "Loading..." : <ItemDetail productDetail={productDetail} />}
+        {loading ? "Loading..." : loadContent()}
       </div>
     </>
   );

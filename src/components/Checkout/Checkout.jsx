@@ -20,7 +20,6 @@ const Checkout = () => {
       ...buyer,
       [e.target.name]: e.target.value
     })
-    console.log(buyer);
   };
 
   const finishOrder = (e) => {
