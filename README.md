@@ -1,15 +1,17 @@
 # Nike Store
 
-This is my final project for the React.js course on Coderhouse.
+This is my final project for the React.js course at Coderhouse.
 It is an e-commerce developed for Nike.
 
 ---
 
 ## Usage
 
-Demo (GIF):
+Hosting: [nikestore-ng.netlify.app](https://nikestore-ng.netlify.app)
 
-![nike-store](https://user-images.githubusercontent.com/65604505/182521936-f23b275c-91a8-404d-9444-90ab4123721d.gif)
+GIF:
+
+![nikestore-gif](https://user-images.githubusercontent.com/65604505/188497040-013cf532-15da-40d2-9b33-db36c1f34284.gif)
 
 ---
 
